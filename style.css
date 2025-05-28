@@ -1,0 +1,69 @@
+/* 设置背景图 */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("assets/background.jpg");  /* 替换为你的背景图 */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* 添加背景遮罩，增强文字可读性 */
+.overlay {
+  background-color: rgba(45, 45, 45, 0.6);
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 导航栏样式 */
+nav {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* 自我介绍样式 */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+/* 个人照片 */
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border: 2px solid rgb(255, 255, 255);
+}

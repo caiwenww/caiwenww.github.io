@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  <h1 class="page-title">My Projects</h1>
+
+  <div class="project-sections">
+    <!-- Section: Social Media Content -->
+    <div class="project-card">
+      <div class="card-front" onclick="flipCard(this)">
+        <h2>Social Media Content</h2>
+      </div>
+      <div class="card-back" onclick="flipCard(this)">
+        <h3>At 7am</h3>
+        <div class="video-thumbnails">
+          <a href="https://www.instagram.com/p/DGu-QFtvdeQ/" target="_blank"><img src="assets/7am-vid1.png" alt="vid1"></a>
+          <a href="https://www.instagram.com/p/DHdaFCsPuUf/" target="_blank"><img src="assets/7am-vid2.png" alt="vid2"></a>
+          <a href="https://www.instagram.com/p/DI3fkuTPGdZ/" target="_blank"><img src="assets/7am-vid3.png" alt="vid3"></a>
+        </div>
+        <h3>At Sansi</h3>
+        <div class="video-thumbnails">
+          <a href="https://www.instagram.com/p/C1zCAB3vUXR/" target="_blank"><img src="assets/sansi-vid1.png" alt="vid4"></a>
+          <a href="https://www.instagram.com/p/C2pk89rvlfw/?img_index=1" target="_blank"><img src="assets/sansi-vid2.png" alt="vid5"></a>
+          <a href="https://www.instagram.com/p/C06GdQcukdB/" target="_blank"><img src="assets/sansi-vid3.png" alt="vid6"></a>
+        </div>
+        <h3>At JJ's House</h3>
+        <div class="video-thumbnails">
+          <a href="https://www.tiktok.com/@jjshouseofficial/video/7160953539647376641" target="_blank"><img src="assets/JJS-vid1.png" alt="vid4"></a>
+          <a href="https://www.tiktok.com/@jjshouseofficial/video/7242611781259136258" target="_blank"><img src="assets/JJS-vid2.png" alt="vid5"></a>
+          <a href="https://www.tiktok.com/@jjshouseofficial/video/7243610225633152274" target="_blank"><img src="assets/JJS-vid3.png" alt="vid6"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Influencer Collaboration -->
+    <div class="project-card">
+      <div class="card-front" onclick="flipCard(this)">
+        <h2>Influencer Collaboration</h2>
+      </div>
+      <div class="card-back" onclick="flipCard(this)">
+        <h3>At Sansi</h3>
+        <div class="video-thumbnails">
+          <a href="https://www.instagram.com/p/C1cLx_tsh2r/" target="_blank"><img src="assets/vid1-influencer-sansi.png" alt="vid7"></a>
+          <a href="https://www.youtube.com/watch?v=k7J0p9xbVH8" target="_blank"><img src="assets/vid2-influencer-sansi.png" alt="vid8"></a>
+          <a href="https://www.tiktok.com/@juni.plants/video/7343807254954528042" target="_blank"><img src="assets/vid3-influencer-sansi.png" alt="vid9"></a>
+        </div>
+        <h3>At JJ's House</h3>
+        <div class="video-thumbnails">
+          <a href="https://www.tiktok.com/@haley__robinson/video/7198665697054985514" target="_blank"><img src="assets/vid1-jjs.png" alt="vid10"></a>
+          <a href="https://www.tiktok.com/@shilanshoko/video/7078525480164527365" target="_blank"><img src="assets/vid2-jjs.png" alt="vid11"></a>
+          <a href="https://www.tiktok.com/@morganrudgexx/video/7211554345475935493" target="_blank"><img src="assets/vid3-jjs.png" alt="vid12"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard(element) {
+      const card = element.parentElement;
+      card.classList.toggle('flipped');
+    }
+  </script>
+</body>
+</html>
