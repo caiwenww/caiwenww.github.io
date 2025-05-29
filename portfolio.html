@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolios</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <!-- Header: 左上导航 + 右上图标与头像 -->
+  <header class="top-bar">
+    <nav class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html" class="active">Portfolios</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-right-background"></div>
+  </header>
+
+  <!-- Title & Intro -->
+  <section class="intro">
+    <h1>Portfolios</h1>
+    <p>A collection of my works across social media, influencer marketing, and content creation.</p>
+  </section>
+  
+  <!-- 加一个包裹容器，把四个button和下面的内容统一管理 -->
+  <!-- Filter Buttons -->
+<div class="portfolio-body">
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterSelection('all', this)">All</button>
+    <button class="filter-btn" onclick="filterSelection('social', this)">Social Media</button>
+    <button class="filter-btn" onclick="filterSelection('influencer', this)">Influencer Marketing</button>
+    <button class="filter-btn" onclick="filterSelection('pr', this)">PR & Blog</button>
+  </div>
+
+  <!-- Gallery Section -->
+  <div class="gallery">
+    <div class="card social" onclick="openModal('assets/7am-vid1.png', 'https://www.instagram.com/p/DGu-QFtvdeQ/', 'A hair showcase video')">
+      <img src="assets/7am-vid1.png" alt="7am Project 1">
+    </div>
+    <div class="card social" onclick="openModal('assets/7am-vid2.png', 'https://www.instagram.com/p/DHdaFCsPuUf/', 'A hair process video')">
+      <img src="assets/7am-vid2.png" alt="7am Project 2">
+    </div>
+    <div class="card social" onclick="openModal('assets/7am-vid3.png', 'https://www.instagram.com/p/DI3fkuTPGdZ/', 'A hair showcase video')">
+      <img src="assets/7am-vid3.png" alt="7am Project 3">
+    </div>
+    <div class="card social" onclick="openModal('assets/7am-vid4.png', 'https://www.instagram.com/p/DILuSjgzB63/', 'A hair rescue video')">
+      <img src="assets/7am-vid4.png" alt="7am Project 4">
+    </div>
+    <div class="card social" onclick="openModal('assets/sansi-vid1.png', 'https://www.instagram.com/p/C1zCAB3vUXR/', &quot;Sansi's main product is plant grow light, so I did some memes to be more interactive with followers.&quot;)">
+      <img src="assets/sansi-vid1.png" alt="Sansi Project 1">
+    </div>
+    <div class="card social" onclick="openModal('assets/sansi-vid2.png', 'https://www.instagram.com/p/C2pk89rvlfw/?img_index=1', 'This is a popular science post I did using AI. The photos were created by AI. Since we were selling grow lights, we need to tell users why they need the grow lights.')">
+      <img src="assets/sansi-vid2.png" alt="Sansi Project 2">
+    </div>
+    <div class="card social" onclick="openModal('assets/sansi-vid3.png', 'https://www.instagram.com/p/C06GdQcukdB/', &quot;This is a re-creation of user's review, to make it more interesting.&quot;)">
+      <img src="assets/sansi-vid3.png" alt="Sansi Project 3">
+    </div>
+    <div class="card social" onclick="openModal('assets/sansi-vid4.png', 'https://www.instagram.com/p/C06GdQcukdB/', &quot;Sometimes we'll collaborate with influencers to post some content.&quot;)">
+      <img src="assets/sansi-vid4.png" alt="Sansi Project 4">
+    </div>
+    <div class="card social" onclick="openModal('assets/JJS-vid1.png', 'https://www.tiktok.com/@jjshouseofficial/video/7160953539647376641', &quot;A giveaway video.&quot;)">
+      <img src="assets/JJS-vid1.png" alt="JJS Project 1">
+    </div>
+    <div class="card social" onclick="openModal('assets/JJS-vid2.png', 'https://www.tiktok.com/@jjshouseofficial/video/7242611781259136258', &quot;A reception dress collection. I will go with photographer to shoot and edit the video.&quot;)">
+      <img src="assets/JJS-vid2.png" alt="JJS Project 2">
+    </div>
+    <div class="card social" onclick="openModal('assets/JJS-vid3.png', 'https://www.tiktok.com/@jjshouseofficial/video/7243610225633152274', &quot;Sometimes when we don't have enough videos, I will use website videos to create some content.&quot;)">
+      <img src="assets/JJS-vid3.png" alt="JJS Project 3">
+    </div>
+    <div class="card social" onclick="openModal('assets/JJS-vid4.png', 'https://www.tiktok.com/@jjshouseofficial/video/7234042691787672834', &quot;A bridesmaid dress collection. When we don't have models, I try to shoot some content to show the dresses.&quot;)">
+      <img src="assets/JJS-vid4.png" alt="JJS Project 4">
+    </div>
+    <div class="card influencer" onclick="openModal('assets/vid1-influencer-sansi.png', 'https://www.instagram.com/p/C1cLx_tsh2r/', 'Collaboration with @aineplants on Instagram.')">
+      <img src="assets/vid1-influencer-sansi.png" alt="Sansi Influencer Collaboration 1">
+    </div>
+    <div class="card influencer" onclick="openModal('assets/vid2-influencer-sansi.png', 'https://www.youtube.com/watch?v=k7J0p9xbVH8', 'Collaboration with @Plant Vibrations with Devin Wallien on YouTube.')">
+      <img src="assets/vid2-influencer-sansi.png" alt="Sansi Influencer Collaboration 2">
+    </div>
+    <div class="card influencer" onclick="openModal('assets/vid3-influencer-sansi.png', 'https://www.tiktok.com/@juni.plants/video/7343807254954528042', 'Collaboration with @juni.plants on TikTok.')">
+      <img src="assets/vid3-influencer-sansi.png" alt="Sansi Influencer Collaboration 3">
+    </div>
+    <div class="card influencer" onclick="openModal('assets/vid4-influencer-sansi.png', 'https://www.instagram.com/p/C3BBECwvRgW/', 'Collaboration with @manyplantsandcounting on Instagram.')">
+      <img src="assets/vid4-influencer-sansi.png" alt="Sansi Influencer Collaboration 4">
+    </div>
+    <div class="card influencer" onclick="openModal('assets/vid1-jjs.png', 'https://www.tiktok.com/@haley__robinson/video/7198665697054985514', 'Collaboration with @Haley Robinson on TikTok.')">
+      <img src="assets/vid1-jjs.png" alt="JJS Influencer Collaboration 1">
+    </div>
+    <div class="card influencer" onclick="openModal('assets/vid2-jjs.png', 'https://www.tiktok.com/@shilanshoko/video/7262075974726995206', 'Collaboration with @shilanshoko on TikTok.')">
+      <img src="assets/vid2-jjs.png" alt="JJS Influencer Collaboration 2">
+    </div>
+    <div class="card influencer" onclick="openModal('assets/vid3-jjs.png', 'https://www.tiktok.com/@morganrudgexx/video/7211554345475935493', 'Collaboration with @morganrudgexx on TikTok.')">
+      <img src="assets/vid3-jjs.png" alt="JJS Influencer Collaboration 3">
+    </div>
+    <div class="card influencer" onclick="openModal('assets/vid4-jjs.png', 'https://www.tiktok.com/@ageminifairy/video/7238295502167510314', 'Collaboration with @ageminifairy on TikTok.')">
+      <img src="assets/vid4-jjs.png" alt="JJS Influencer Collaboration 4">
+    </div>
+    <div class="card pr" onclick="openModal('assets/blog1.png', 'https://www.jjshouse.com/blog/real_wedding/real-wedding-story-emily-kyle', 'A blog of a real wedding story - Emily & Kyle.')">
+      <img src="assets/blog1.png" alt="Blog 1">
+    </div>
+    <div class="card pr" onclick="openModal('assets/blog2.png', 'https://www.jjshouse.com/blog/real_wedding/real-wedding-story-lukasdeedra', 'A blog of a real wedding story - Lukas & Deedra.')">
+      <img src="assets/blog2.png" alt="Blog 2">
+    </div>
+    <div class="card pr" onclick="openModal('assets/blog3.png', 'https://www.jjshouse.com/blog/wedding-colors-we-are-excited-to-see-in-2022', 'A blog of wedding colour trends.')">
+      <img src="assets/blog3.png" alt="Blog 3">
+    </div>
+    <div class="card pr" onclick="openModal('assets/blog4.png', 'https://www.jjshouse.com/blog/how-to-create-wedding-budget-how-much-the-wedding-costs', 'A blog of tips to control wedding budget.')">
+      <img src="assets/blog4.png" alt="Blog 4">
+    </div>
+  </div>
+</div>
+
+  <!-- Modal Popup -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-img" src="" alt="Project Image">
+    <p><a id="modal-link" href="#" target="_blank">View Project</a></p>
+    <p id="modal-desc"></p>
+  </div>
+
+  <!-- JS -->
+  <script>
+    function filterSelection(category, button) {
+      const cards = document.querySelectorAll('.card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      const gallery = document.querySelector('.gallery');
+
+      // 重置所有按钮样式
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+        
+      // 控制卡片显示与隐藏
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // 控制布局样式：PR 两列，其他恢复
+      if (category === 'pr') {
+        gallery.classList.add('filter-pr');
+      } else {
+        gallery.classList.remove('filter-pr');
+      }
+    }
+
+    function openModal(img, link, desc) {
+      document.getElementById("modal-img").src = img;
+      document.getElementById("modal-link").href = link;
+      document.getElementById("modal-desc").innerText = desc;
+      document.getElementById("modal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
