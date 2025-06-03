@@ -1,15 +1,15 @@
-/* 设置背景图 */
+/* background img */
 body {
   margin: 0;
   padding: 0;
-  background-image: url("assets/background.jpg");  /* 替换为你的背景图 */
+  background-image: url("assets/background.jpg"); 
   background-size: cover;
   background-position: center;
   font-family: Arial, sans-serif;
   color: white;
 }
 
-/* 添加背景遮罩，增强文字可读性 */
+/* 背景遮罩 */
 .overlay {
   background-color: rgba(45, 45, 45, 0.6);
   min-height: 100vh;

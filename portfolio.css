@@ -1,8 +1,12 @@
+/* ========= Body ========== */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f5faff;
 }
+
+/* ========= 顶部导航 ========== */
 
 .top-bar {
   display: flex;
@@ -37,6 +41,7 @@ body {
   padding: 0;
   z-index: 1;
 }
+
 .nav-right-background a {
   position: absolute;
   top: 20px;
@@ -53,6 +58,8 @@ body {
   box-sizing: border-box;
 }
 
+/* ========= 页面标题介绍 ========== */
+
 .intro {
   text-align: left;
   padding: 60px 80px;
@@ -68,15 +75,13 @@ body {
   color: #555;
 }
 
-.portfolio-body {
-  margin-top: 200px;
-}
+/* ========= 筛选按钮栏 ========== */
 
 .filters {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 20px 0;
+  margin-bottom: 30px;
 }
 
 .filter-btn {
@@ -93,10 +98,22 @@ body {
   font-weight: bold;
 }
 
+.portfolio {
+  padding-top: 150px; 
+  margin-bottom: 0;  
+}
+
+.portfolio-body {
+  display: block;
+}
+
+/* ========= “All” 模式使用的 Grid Gallery ========== */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  row-gap: 48px; 
+  column-gap: 24px;
   padding: 20px 60px;
   justify-items: center;
 }
@@ -105,48 +122,139 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* ========= 横滑每家公司模块（公司介绍 + 横滑作品） ========== */
+
+/* 每个公司独立展示区：竖向排列 */
+.company-group {
+  display: block;
+  padding: 0 60px;
+}
+
+/* 公司标题和简介 */
+.company-info {
+  display: none;
+}
+
+.company-info h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.company-info p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* 横向滑动的作品区域 */
+.company-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 24px;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 去除横向滚动条 
+.company-gallery::-webkit-scrollbar {
+  display: none;
+}
+*/
+/* 卡片：每屏展示 4 张 */
 .card {
-  width: 100%;
-  max-width: 300px;
+  flex: 0 0 calc(25% - 18px); /* 保证 4 个卡片均匀展示 */
+  aspect-ratio: 3 / 5;
+  scroll-snap-align: start;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   cursor: pointer;
 }
 
 .card img {
   width: 100%;
-  aspect-ratio: 3/5;
-  /*height: 500px;*/
+  height: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-/*适配pc端和移动端*/
+
+/* ========= 响应式适配（移动端卡片宽度） ========== */
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 18px);
+  }
+}
+
+/* ========= “All” 模式下 PC / Mobile 自适应列数 ========== */
+
 @media (max-width: 991px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 599px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* 默认卡片宽度适中，适配 PR 横图 */
+/* ========= Blog（横图卡片）用的特殊样式 ========== */
+
 .card.pr {
-  max-width: 500px;
-  width: 100%;
+  flex: 0 0 calc(50% - 12px); /* 每屏显示 2 张横图卡片 */
+  max-width: 50%;
+  scroll-snap-align: start;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
 }
 
-/* 横图比例控制为 16:9 */
 .card.pr img {
-  aspect-ratio: 16 / 9;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-/* Modal */
+.gallery-wrapper {
+  position: relative;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 8px 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+.scroll-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+
+/* ========= Modal 弹窗样式 ========== */
+
 .modal {
   display: none;
   position: fixed;
